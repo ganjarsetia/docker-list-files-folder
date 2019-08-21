@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ganjarsetia/docker-list-files-folder.svg?branch=master)](https://travis-ci.org/ganjarsetia/docker-list-files-folder)
+
 # Docker for serving list files & folders with nginx basic auth
 
 ### Installation:
