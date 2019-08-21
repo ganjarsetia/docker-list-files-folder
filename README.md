@@ -2,7 +2,7 @@
 
 ### Installation:
 
-* clone the repo `git clone `
+* clone the repo `git clone https://github.com/ganjarsetia/docker-list-files-folder.git`
 * create .env file by copying it `cp .env.example .env` and change it.
 * `docker-compose up -d`
 
