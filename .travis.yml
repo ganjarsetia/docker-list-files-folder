@@ -1,0 +1,15 @@
+services:
+  - docker
+
+branches:
+  only:
+    - master
+
+script:
+  - cp .env.example .env
+  - docker-compose build
+  - docker-compose up -d
+  - curl http://localhost:3001/
+
+after_script:
+  - docker-compose down
