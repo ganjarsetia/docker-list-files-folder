@@ -1,15 +1,14 @@
-services:
-  - docker
+language: bash
+services: docker
 
-branches:
-  only:
-    - master
+install:
+  - git clone https://github.com/ganjarsetia/docker-list-files-folder.git
+  - cp .env.example .env
 
 script:
-  - cp .env.example .env
   - docker-compose build
   - docker-compose up -d
   - curl http://localhost:3001/
-
-after_script:
   - docker-compose down
+after_script:
+  - docker images
