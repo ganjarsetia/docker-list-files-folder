@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "${PATH_STATIC:-3001}:80"
+    volumes:
+      - ${PATH_STATIC:-.}:/var/www/html
+    environment:
+      BASIC_AUTH_USERNAME: ${USERNAME:-dev}
+      BASIC_AUTH_PASSWORD: ${PASSWORD:-admin}
